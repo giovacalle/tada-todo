@@ -1,0 +1,60 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:@typescript-eslint/recommended", "eslint:recommended", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "globals": {
+    "JSX": "readonly"
+  },
+  "rules": {
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneus-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "linebreak-style": ["error", "windows"],
+    "indent": ["error", 2],
+    "prefer-arrow-callback": "error",
+    "no-use-before-define": "off",
+    "no-alert": "error",
+    "no-array-constructor": "warn",
+    "no-case-declarations": "off",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-continue": "warn",
+    "no-debugger": "error",
+    "no-eval": "warn",
+    "no-multi-spaces": "error",
+    "no-new": "warn",
+    "no-plusplus": "warn",
+    "no-tabs": "error",
+    "no-useless-catch": "warn",
+    "no-empty": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+    ],
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+    "react/prop-types": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "off"
+  }
+}
