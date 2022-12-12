@@ -9,6 +9,8 @@ import About from './pages/about/about';
 import Home from './pages/home/home';
 import NewTodo from './pages/new-todo/new-todo';
 import Account from './pages/account/account';
+import SignUp from './pages/account/sign-up/sign-up';
+import ForgotPsw from './pages/account/forgot-psw/forgot-psw';
 import TodoItem from './pages/todo-item/todo-item';
 
 import { Header } from './components/header';
@@ -18,7 +20,23 @@ const routes = [
   { path: '/', element: <Home /> },
   { path: '/about', element: <About /> },
   { path: '/new-todo', element: <NewTodo /> },
-  { path: '/account', element: <Account /> },
+  {
+    path: '/account',
+    children: [
+      {
+        path: '/',
+        element: <Account />
+      },
+      {
+        path: '/sign-up',
+        element: <SignUp />
+      },
+      {
+        path: 'forgot-psw',
+        element: <ForgotPsw />
+      }
+    ]
+  },
   { path: ':todoId', element: <TodoItem /> }
 ];
 const history = createBrowserHistory();
