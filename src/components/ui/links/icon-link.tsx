@@ -1,15 +1,30 @@
 import { Link } from '@tanstack/react-location';
-import React, { ReactNode } from 'react';
+import { PropsWithChildren, ReactNode } from 'react';
 
-export const IconLink: React.FC<{
+interface IconLinkProps {
   to: string;
   icon: ReactNode;
   text?: string;
-}> = ({ to, icon, text }) => {
+  disabled?: boolean;
+}
+
+export const IconLink = ({
+  to,
+  icon,
+  text,
+  disabled = false,
+  children
+}: PropsWithChildren<IconLinkProps>) => {
   return (
-    <Link to={to} className="flex flex-col items-center gap-0">
-      {/* {icon} */}
+    <Link
+      to={to}
+      className={`relative flex flex-col items-center gap-0  ${
+        disabled ? 'opacity-40' : ''
+      }`}
+      disabled={disabled}>
+      {icon}
       <span className="text-md">{text}</span>
+      {children}
     </Link>
   );
 };

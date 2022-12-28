@@ -1,39 +1,10 @@
+import TodosList from './todos-list/todos-list';
+
 const Home = () => {
   return (
     <>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
-      <div>cioa</div>
+      {/* <TodosFilters /> */}
+      <TodosList />
     </>
   );
 };

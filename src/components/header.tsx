@@ -1,6 +1,5 @@
 import { BiTask } from 'react-icons/bi';
-import { CiCircleInfo } from 'react-icons/ci';
-
+import { BsInfoCircle } from 'react-icons/bs';
 import { IconLink } from './ui/links/icon-link';
 
 export const Header = () => {
@@ -10,7 +9,7 @@ export const Header = () => {
         <h2 className="w-full m-0 text-2xl text-center">
           Ta daa, to doo <BiTask className="inline text-orange" />
         </h2>
-        <IconLink to="/about" icon={<CiCircleInfo />} text="about" />
+        <IconLink to="/about" icon={<BsInfoCircle />} text="about" />
       </div>
     </header>
   );

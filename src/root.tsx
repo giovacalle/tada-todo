@@ -8,10 +8,10 @@ import {
 import About from './pages/about/about';
 import Home from './pages/home/home';
 import NewTodo from './pages/new-todo/new-todo';
+import ModifyTodo from './pages/modify-todo/modify-todo';
 import Account from './pages/account/account';
 import SignUp from './pages/account/sign-up/sign-up';
 import ForgotPsw from './pages/account/forgot-psw/forgot-psw';
-import TodoItem from './pages/todo-item/todo-item';
 
 import { Header } from './components/header';
 import { Footer } from './components/footer';
@@ -37,7 +37,7 @@ const routes = [
       }
     ]
   },
-  { path: ':todoId', element: <TodoItem /> }
+  { path: ':todoId', element: <ModifyTodo id={2} /> }
 ];
 const history = createBrowserHistory();
 const location = new ReactLocation({ history });
