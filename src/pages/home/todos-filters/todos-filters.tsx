@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, MouseEvent, useState } from 'react';
 import { useTodosStore } from '../../../hooks/useTodosStore';
 
 import { ImFilter } from 'react-icons/im';
@@ -20,7 +20,10 @@ const TodosFilters = () => {
   };
 
   const clickStatusHandler = (e: MouseEvent<HTMLButtonElement>) => {
-    updateFilters({ ...filters, status: e.target.id });
+    updateFilters({
+      ...filters,
+      status: e.currentTarget.id as 'all' | 'todo' | 'done'
+    });
   };
 
   return (
