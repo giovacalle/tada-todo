@@ -37,7 +37,7 @@ const routes = [
       }
     ]
   },
-  { path: ':todoId', element: <ModifyTodo id={2} /> }
+  { path: ':todoId', element: <ModifyTodo /> }
 ];
 const history = createBrowserHistory();
 const location = new ReactLocation({ history });
@@ -47,7 +47,7 @@ const Root = () => {
     <Router location={location} routes={routes}>
       <div className="h-screen max-w-lg sm:w-full mx-auto mt-0 flex flex-col items-center">
         <Header />
-        <main className="w-full px-2 flex-1 overflow-auto text-center">
+        <main className="relative w-full p-2 flex-1 flex flex-col overflow-hidden text-center">
           <Outlet />
         </main>
         <Footer />

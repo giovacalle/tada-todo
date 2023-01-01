@@ -1,9 +1,10 @@
+import TodosFilters from './todos-filters/todos-filters';
 import TodosList from './todos-list/todos-list';
 
 const Home = () => {
   return (
     <>
-      {/* <TodosFilters /> */}
+      <TodosFilters />
       <TodosList />
     </>
   );

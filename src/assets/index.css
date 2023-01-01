@@ -36,3 +36,39 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 20px;
 }
+
+.positionated-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.animation-centered-from-top {
+  animation: centered-from-top 0.7s ease-in-out;
+}
+
+@keyframes centered-from-top {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 50%;
+  }
+}
+
+.mark-checked:checked:after {
+  content: '\2713';
+}
+
+.animate-opacity {
+  animation: opacity 1s ease-in-out;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
