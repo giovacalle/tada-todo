@@ -53,10 +53,12 @@ const TitledAlert = ({
           <div className={`px-4 py-3 border border-t-0 rounded-b ${cssBody}`}>
             <p>{text}</p>
           </div>
-          <div
-            className={`flex items-center justify-end px-4 py-2 rounded-b font-bold border-x border-b ${cssFooter}`}>
-            {children}
-          </div>
+          {children && (
+            <div
+              className={`flex items-center justify-end px-4 py-2 rounded-b font-bold border-x border-b ${cssFooter}`}>
+              {children}
+            </div>
+          )}
         </div>
       )}
     </>

@@ -5,6 +5,7 @@ import { Todo } from '../types/todo';
 interface TodosFilter {
   text: string;
   status: 'all' | 'todo' | 'done';
+  date: 'ascending' | 'descending';
 }
 
 interface TodosState {
@@ -23,7 +24,8 @@ export const useTodosStore = create<TodosState>()(
         todos: [],
         filters: {
           text: '',
-          status: 'all'
+          status: 'all',
+          date: 'descending'
         },
         add: todo => set(state => ({ todos: [...state.todos, todo] })),
         delete: id =>

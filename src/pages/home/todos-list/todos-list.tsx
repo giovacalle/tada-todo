@@ -28,6 +28,11 @@ const TodosList = () => {
 
     return isStatus;
   });
+  todosFiltered.sort((a, b) => {
+    return filters.date == 'ascending'
+      ? a.addedOn - b.addedOn
+      : b.addedOn - a.addedOn;
+  });
   const isEmpty = todosFiltered.length === 0;
 
   return (
