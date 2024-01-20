@@ -1,14 +1,10 @@
 # Overview
 
-tada-todo is a really simple app to take note of your tasks.
+tada-todo is a really simple concept of todo app.
 
-## What does it use
+## Stack
 
-- ReactJs
+- React.js
 - TS
 - Tailwind CSS
 - Vite
-
-## Future features
-
-1. Sync tasks over more devices
